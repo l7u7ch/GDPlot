@@ -21,14 +21,3 @@ public partial class YAxis : Control
         }
     }
 }
-
-// using Godot.Collections;
-
-// public override void _Ready() { }
-
-// DrawRect(new Rect2(Vector2.Zero, GetRect().Size), Colors.Red);
-
-// DrawLine(new Vector2(0, 0), new Vector2(0, GetRect().Size.Y), Colors.Blue);
-// DrawLine(new Vector2(0, 0), new Vector2(GetRect().Size.X, 0), Colors.Blue);
-// DrawLine(new Vector2(0, GetRect().Size.Y), new Vector2(GetRect().Size.X, GetRect().Size.Y), Colors.Blue);
-// DrawLine(new Vector2(GetRect().Size.X, 0), new Vector2(GetRect().Size.X, GetRect().Size.Y), Colors.Blue);

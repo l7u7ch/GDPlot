@@ -25,12 +25,3 @@ public partial class Line : Element
             );
     }
 }
-
-// public Color MarkerColor = new(GD.Randf(), GD.Randf(), GD.Randf());
-// public int MarkerSize = 4;
-
-
-// .ToList()
-// .ForEach(Point => DrawCircle(position: Point, radius: MarkerSize, color: MarkerColor));
-
-// using Godot.Collections;

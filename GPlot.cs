@@ -108,12 +108,3 @@ public partial class GPlot : Control
         }
     }
 }
-
-// e.X = new Array<float>(e.X.Select(x => (x - minX) / (maxX - minX) * Size.X));
-// e.Y = new Array<float>(e.Y.Select(y => Size.Y - (y - minY) / (maxY - minY) * Size.Y));
-
-// GD.Print("minX: " + minX);
-// GD.Print("maxX: " + maxX);
-// GD.Print("minY: " + minY);
-// GD.Print("maxY: " + maxY);
-// GD.Print();
