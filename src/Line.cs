@@ -1,7 +1,6 @@
 using System.Linq;
 using Godot;
 
-[Tool]
 public partial class Line : Element
 {
     public Color LineColor = new(GD.Randf(), GD.Randf(), GD.Randf());

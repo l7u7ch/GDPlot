@@ -2,7 +2,6 @@ using System.Linq;
 using Godot;
 using Godot.Collections;
 
-[Tool]
 public partial class GPlot : Control
 {
     private Array<Element> Elements = new();

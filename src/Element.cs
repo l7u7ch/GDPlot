@@ -1,7 +1,6 @@
 using Godot;
 using Godot.Collections;
 
-[Tool]
 public partial class Element : Control
 {
     public Array<float> X = new();

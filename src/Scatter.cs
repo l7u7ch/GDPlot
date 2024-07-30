@@ -1,7 +1,6 @@
 using System.Linq;
 using Godot;
 
-[Tool]
 public partial class Scatter : Element
 {
     public Color MarkerColor = new(GD.Randf(), GD.Randf(), GD.Randf());

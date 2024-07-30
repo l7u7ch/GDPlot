@@ -1,6 +1,5 @@
 using Godot;
 
-[Tool]
 public partial class Plot : Control
 {
     public override void _Draw()
