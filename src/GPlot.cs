@@ -11,19 +11,22 @@ public partial class GPlot : Control
 
     public override void _Ready()
     {
+        int Left = 40;
+        int Right = 20;
+
         // Plot
-        Plot.Position = new Vector2(50, 0);
-        Plot.Size = Size - new Vector2(50, 50);
+        Plot.Position = new Vector2(Left, 0);
+        Plot.Size = Size - new Vector2(Left, Right);
         AddChild(Plot);
 
         // XAxis
-        XAxis.Position = Size - new Vector2(Size.X - 50, 50);
-        XAxis.Size = new Vector2(Size.X - 50, 50);
+        XAxis.Position = Size - new Vector2(Size.X - Left, Right);
+        XAxis.Size = new Vector2(Size.X - Left, Right);
         AddChild(XAxis);
 
         // YAxis
         YAxis.Position = Vector2.Zero;
-        YAxis.Size = Size - new Vector2(Size.X - 50, 50);
+        YAxis.Size = Size - new Vector2(Size.X - Left, Right);
         AddChild(YAxis);
     }
 
