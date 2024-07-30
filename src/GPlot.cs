@@ -48,7 +48,18 @@ public partial class GPlot : Control
         DrawLine(TopRight, BottomRight, Colors.LightSlateGray); // 右縦線
     }
 
-    // public Bar CreateBar() { }
+    public Bar CreateBar()
+    {
+        Bar Bar = new();
+
+        Bar.Position = Vector2.Zero;
+        Bar.Size = Plot.Size;
+
+        Elements.Add(Bar);
+        Plot.AddChild(Bar);
+
+        return Bar;
+    }
 
     public Line CreateLine()
     {
