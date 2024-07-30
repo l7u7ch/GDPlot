@@ -65,9 +65,11 @@ public partial class GPlot : Control
     {
         Line Line = new();
 
-        Plot.AddChild(Line);
+        Line.Position = Vector2.Zero;
+        Line.Size = Plot.Size;
 
         Elements.Add(Line);
+        Plot.AddChild(Line);
 
         return Line;
     }
@@ -76,9 +78,11 @@ public partial class GPlot : Control
     {
         Scatter Scatter = new();
 
-        Plot.AddChild(Scatter);
+        Scatter.Position = Vector2.Zero;
+        Scatter.Size = Plot.Size;
 
         Elements.Add(Scatter);
+        Plot.AddChild(Scatter);
 
         return Scatter;
     }
