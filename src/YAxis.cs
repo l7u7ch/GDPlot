@@ -15,7 +15,7 @@ public partial class YAxis : Control
         {
             Font Font = ThemeDB.FallbackFont;
             float X = 0;
-            float Y = Position.Y + Size.Y - i * (Size.Y / Ticks);
+            float Y = Size.Y - i * (Size.Y / Ticks);
             DrawString(Font, new Vector2(X, Y), Math.Round(i * Unit + MinValue, 1).ToString());
         }
     }
