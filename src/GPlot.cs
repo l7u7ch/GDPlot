@@ -32,10 +32,10 @@ public partial class GPlot : Control
 
     public override void _Draw()
     {
-        int Top = 45;
-        int Bottom = 15;
-        int Left = 15;
-        int Right = 45;
+        int Top = 0;
+        int Bottom = 0;
+        int Left = 0;
+        int Right = 0;
 
         Vector2 TopLeft = new Vector2(0 - Left, 0 - Top);
         Vector2 TopRight = new Vector2(Size.X + Right, 0 - Top);
