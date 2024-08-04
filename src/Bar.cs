@@ -3,8 +3,8 @@ using Godot;
 
 public partial class Bar : Element
 {
-    Color BarColor = new(GD.Randf(), GD.Randf(), GD.Randf());
-    int BarWeight = 10;
+    public Color BarColor = new(GD.Randf(), GD.Randf(), GD.Randf());
+    public int BarWeight = 10;
 
     public override void _Draw()
     {
