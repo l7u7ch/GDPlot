@@ -8,8 +8,7 @@ public partial class Bar : Element
 
     public override void _Draw()
     {
-        NormalizedX
-            .Zip(NormalizedY, (X, Y) => new Vector2(X, Y))
+        Normalize()
             .ToList()
             .ForEach(Point =>
             {

@@ -8,9 +8,6 @@ public partial class Scatter : Element
 
     public override void _Draw()
     {
-        NormalizedX
-            .Zip(NormalizedY, (X, Y) => new Vector2(X, Y))
-            .ToList()
-            .ForEach(Point => DrawCircle(position: Point, radius: MarkerSize, color: MarkerColor));
+        Normalize().ToList().ForEach(Point => DrawCircle(position: Point, radius: MarkerSize, color: MarkerColor));
     }
 }

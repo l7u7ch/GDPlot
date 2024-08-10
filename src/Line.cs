@@ -8,13 +8,7 @@ public partial class Line : Element
 
     public override void _Draw()
     {
-        if (NormalizedX.Count < 2 || NormalizedY.Count < 2)
-        {
-            return;
-        }
-
-        NormalizedX
-            .Zip(NormalizedY, (X, Y) => new Vector2(X, Y))
+        Normalize()
             .Aggregate(
                 (prev, curr) =>
                 {
