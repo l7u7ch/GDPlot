@@ -32,10 +32,6 @@ public partial class Plot : Control
             DrawGrid();
         }
 
-        // 全ての配列を平坦化する
-        float[] allX = Elements.Where(e => e.X != null).SelectMany(e => e.X).DefaultIfEmpty().ToArray();
-        float[] allY = Elements.Where(e => e.Y != null).SelectMany(e => e.Y).DefaultIfEmpty().ToArray();
-
         // Elementのプロパティを更新する
         Elements
             .ToList()
