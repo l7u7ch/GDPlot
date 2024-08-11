@@ -1,7 +1,7 @@
 using Godot;
 
 [Tool]
-public partial class GPlot : Control
+public partial class GDPlot : Control
 {
     public Plot Plot = new();
     private XAxis XAxis = new();

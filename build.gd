@@ -2,7 +2,7 @@
 extends EditorPlugin
 
 func _enter_tree():
-	add_custom_type("GPlot", "Control", preload("src/GPlot.cs"), null)
+	add_custom_type("GDPlot", "Control", preload("src/GDPlot.cs"), null)
 
 func _exit_tree():
-	remove_custom_type("GPlot")
+	remove_custom_type("GDPlot")
