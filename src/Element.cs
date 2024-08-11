@@ -11,8 +11,8 @@ public partial class Element : Control
 
     public Array<Vector2> Normalize()
     {
-        Array<float> NormalizedX = new Array<float>(X.Select(x => (x - MinValue.X) / (MaxValue.X - MinValue.X) * Size.X));
-        Array<float> NormalizedY = new Array<float>(Y.Select(y => (1 - (y - MinValue.Y) / (MaxValue.Y - MinValue.Y)) * Size.Y));
+        Array<float> NormalizedX = new(X.Select(x => (x - MinValue.X) / (MaxValue.X - MinValue.X) * Size.X));
+        Array<float> NormalizedY = new(Y.Select(y => (1 - (y - MinValue.Y) / (MaxValue.Y - MinValue.Y)) * Size.Y));
         return new Array<Vector2>(NormalizedX.Zip(NormalizedY, (x, y) => new Vector2(x, y)));
     }
 }
