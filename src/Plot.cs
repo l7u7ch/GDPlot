@@ -33,7 +33,6 @@ public partial class Plot : Control
         }
 
         // 全ての配列を平坦化する
-        // ここの部分が GetMaxValue とか GetMinValue とかで分離すべき
         float[] allX = Elements.Where(e => e.X != null).SelectMany(e => e.X).DefaultIfEmpty().ToArray();
         float[] allY = Elements.Where(e => e.Y != null).SelectMany(e => e.Y).DefaultIfEmpty().ToArray();
 
