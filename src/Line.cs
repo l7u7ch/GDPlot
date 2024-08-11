@@ -8,6 +8,11 @@ public partial class Line : Element
 
     public override void _Draw()
     {
+        if (X.Count < 2 || Y.Count < 2)
+        {
+            return;
+        }
+
         Normalize()
             .Aggregate(
                 (prev, curr) =>
