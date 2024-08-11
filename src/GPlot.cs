@@ -1,5 +1,6 @@
 using Godot;
 
+[Tool]
 public partial class GPlot : Control
 {
     public Plot Plot = new();
