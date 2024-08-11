@@ -33,13 +33,13 @@ GDPlot GDPlot = new()
     Position = new Vector2(50, 50)
 };
 Scatter Scatter = GDPlot.Plot.CreateScatter();
-Scatter.X = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
-Scatter.Y = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Scatter.X = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Scatter.Y = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
 Scatter.MarkerColor = Colors.Red;
 AddChild(GDPlot);
 ```
 
-![](resource/061356.png)
+![](resource/062200.png)
 
 ### 3.2. Line Graph を描画する
 
@@ -50,8 +50,8 @@ GDPlot GDPlot = new()
     Position = new Vector2(50, 50)
 };
 Line Line = GDPlot.Plot.CreateLine();
-Line.X = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
-Line.Y = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Line.X = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Line.Y = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
 Line.LineColor = Colors.Red;
 AddChild(GDPlot);
 ```
@@ -67,10 +67,10 @@ GDPlot GDPlot = new()
     Position = new Vector2(50, 50)
 };
 Bar Bar = GDPlot.Plot.CreateBar();
-Bar.X = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
-Bar.Y = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Bar.X = new() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Bar.Y = new() { 2, 17, 25, 13, 99, 61, 6, 41, 63, 20 };
 Bar.BarColor = Colors.Red;
 AddChild(GDPlot);
 ```
 
-![](resource/061516.png)
+![](resource/062052.png)
