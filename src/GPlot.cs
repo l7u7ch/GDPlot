@@ -5,10 +5,6 @@ public partial class GPlot : Control
     public Plot Plot = new();
     private XAxis XAxis = new();
     private YAxis YAxis = new();
-    public Color FrameColor = Colors.LightSlateGray;
-    public bool IsFrame = true;
-
-    private void DrawFrame() { }
 
     public override void _Ready()
     {
@@ -19,11 +15,6 @@ public partial class GPlot : Control
 
     public override void _Draw()
     {
-        if (IsFrame)
-        {
-            DrawFrame();
-        }
-
         int YOKO = 30;
         int TATE = 20;
 
