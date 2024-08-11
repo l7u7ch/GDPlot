@@ -6,7 +6,7 @@ public partial class Element : Control
 {
     public Array<float> X = new();
     public Array<float> Y = new();
-    public Vector2 MaxValue = Vector2.Inf;
+    public Vector2 MaxValue = Vector2.Zero;
     public Vector2 MinValue = Vector2.Zero;
 
     public Array<Vector2> Normalize()
