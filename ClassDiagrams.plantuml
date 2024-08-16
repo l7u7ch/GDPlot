@@ -1,0 +1,90 @@
+@startuml
+
+!theme blueprint
+hide circle
+hide empty members
+
+class Control {
+  + Position: Vector2
+  + Size: Vector2
+  + _Ready(): void
+  + _Draw(): void
+  + QueueRedraw(): void
+}
+
+class GPlot {
+  + Plot: Plot
+  + XAxis: XAxis
+  + YAxis: YAxis
+  + _Ready(): void
+  + _Draw(): void
+}
+
+class Plot {
+  - Elements: Element[]
+  + GridColor: Color
+  + GridTicksX: int
+  + GridTicksY: int
+  + IsGrid: bool
+  - DrawGrid(): void
+  + _Draw(): void
+  + CreateBar(): Bar
+  + CreateLine(): Line
+  + CreateScatter(): Scatter
+  + GetMaxValue(): Vector2
+  + GetMinValue(): Vector2
+}
+
+' + FrameColor: Color
+' + IsFrame: bool
+' - DrawFrame(): void
+
+class XAxis {
+  + FontColor: Color
+  + FontSize: int
+  + MaxValue: float
+  + MinValue: float
+  + Ticks: int
+}
+
+
+class YAxis {
+  + FontColor: Color
+  + FontSize: int
+  + MaxValue: float
+  + MinValue: float
+  + Ticks: int
+}
+
+class Element {
+  + X: float[]
+  + Y: float[]
+  + MaxValue: Vector2
+  + MinValue: Vector2
+  + Normalize(): Vector2[]
+}
+
+class Bar extends Element {
+  + BarColor: Color
+  + BarWeight: int
+  + _Draw(): void
+}
+
+class Line extends Element {
+  + LineColor: Color
+  + LineWeight: int
+  + _Draw(): void
+}
+
+class Scatter extends Element {
+  + MarkerColor: Color
+  + MarkerSize: Int
+  + _Draw(): void
+}
+
+GPlot "1" *-- "1" Plot
+GPlot "1" *-- "1" XAxis
+GPlot "1" *-- "1" YAxis
+Plot  "1" *-- "*" Element
+
+@enduml
