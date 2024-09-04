@@ -67,17 +67,17 @@ public partial class Plot : Control
 
     public Vector2 GetMaxValue()
     {
-        float[] flattenX = Elements.Where(e => e.X != null).SelectMany(e => e.X).DefaultIfEmpty().ToArray();
-        float[] flattenY = Elements.Where(e => e.Y != null).SelectMany(e => e.Y).DefaultIfEmpty().ToArray();
+        float MaxValueX = Elements.SelectMany(e => e.Points).Max(Point => Point.X);
+        float MaxValueY = Elements.SelectMany(e => e.Points).Max(Point => Point.Y);
 
-        return new Vector2(flattenX.Max(), flattenY.Max());
+        return new(MaxValueX, MaxValueY);
     }
 
     public Vector2 GetMinValue()
     {
-        float[] flattenX = Elements.Where(e => e.X != null).SelectMany(e => e.X).DefaultIfEmpty().ToArray();
-        float[] flattenY = Elements.Where(e => e.Y != null).SelectMany(e => e.Y).DefaultIfEmpty().ToArray();
+        float MinValueX = Elements.SelectMany(e => e.Points).Min(Point => Point.X);
+        float MinValueY = Elements.SelectMany(e => e.Points).Min(Point => Point.Y);
 
-        return new Vector2(flattenX.Min(), flattenY.Min());
+        return new(MinValueX, MinValueY);
     }
 }
