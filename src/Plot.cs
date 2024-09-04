@@ -65,16 +65,6 @@ public partial class Plot : Control
         return Line;
     }
 
-    public Scatter CreateScatter()
-    {
-        Scatter Scatter = new();
-
-        Elements.Add(Scatter);
-        AddChild(Scatter);
-
-        return Scatter;
-    }
-
     public Vector2 GetMaxValue()
     {
         float[] flattenX = Elements.Where(e => e.X != null).SelectMany(e => e.X).DefaultIfEmpty().ToArray();

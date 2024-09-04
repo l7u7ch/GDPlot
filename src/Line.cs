@@ -3,8 +3,10 @@ using Godot;
 
 public partial class Line : Element
 {
-    public Color LineColor = new(GD.Randf(), GD.Randf(), GD.Randf());
+    public Color LineColor = Colors.Red;
+    public Color MarkerColor = Colors.Red;
     public int LineWeight = 2;
+    public int MarkerSize = 4;
 
     public override void _Draw()
     {
@@ -21,5 +23,7 @@ public partial class Line : Element
                     return curr;
                 }
             );
+
+        Normalize().ToList().ForEach(Point => DrawCircle(position: Point, radius: MarkerSize, color: MarkerColor));
     }
 }
