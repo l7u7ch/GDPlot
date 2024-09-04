@@ -13,12 +13,12 @@ public partial class YAxis : Control
 
         for (int i = 0; i <= Ticks; i++)
         {
-            Font Font = ThemeDB.FallbackFont;
-            float X = 0;
-            float Y = Size.Y - i * (Size.Y / Ticks);
-            DrawString(
-                font: Font,
-                pos: new Vector2(X, Y),
+            Font _Font = ThemeDB.FallbackFont;
+            float _X = 0;
+            float _Y = Size.Y - i * (Size.Y / Ticks);
+            DrawString( //
+                font: _Font,
+                pos: new(_X, _Y),
                 text: Math.Round(i * Unit + MinValue, 1).ToString(),
                 alignment: HorizontalAlignment.Right,
                 width: 32

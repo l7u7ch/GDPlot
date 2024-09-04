@@ -16,9 +16,11 @@ public partial class XAxis : Control
             Font _Font = ThemeDB.FallbackFont;
             float _X = Size.X / Ticks * i;
             float _Y = _Font.GetAscent() - _Font.GetDescent();
-            Vector2 _Position = new Vector2(_X, _Y);
-            string _Text = Math.Round(i * Unit + MinValue, 1).ToString();
-            DrawString(font: _Font, pos: _Position, text: _Text);
+            DrawString( //
+                font: _Font,
+                pos: new(_X, _Y),
+                text: Math.Round(i * Unit + MinValue, 1).ToString()
+            );
         }
     }
 }
