@@ -6,8 +6,8 @@ public partial class Plot : Control
 {
     private Array<Element> Elements = new();
     public Color GridColor = Colors.LightSlateGray;
-    public int GridTicksX = 6;
-    public int GridTicksY = 6;
+    public int GridTicksX = 4;
+    public int GridTicksY = 4;
     public bool IsGrid = true;
 
     private void DrawGrid()

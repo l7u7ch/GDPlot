@@ -3,7 +3,7 @@ using Godot;
 
 public partial class YAxis : Control
 {
-    public int Ticks = 6;
+    public int Ticks = 3;
     public float MinValue = 0;
     public float MaxValue = 0;
 
