@@ -4,8 +4,8 @@ using Godot;
 public partial class GDPlot : Control
 {
     public Plot Plot = new();
-    private XAxis XAxis = new();
-    private YAxis YAxis = new();
+    public XAxis XAxis = new();
+    public YAxis YAxis = new();
 
     public override void _Ready()
     {
