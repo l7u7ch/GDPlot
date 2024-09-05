@@ -2,6 +2,27 @@ using System.Linq;
 using Godot;
 using Godot.Collections;
 
+public static class ArrayExtensions
+{
+    public static void Append(this Array<Vector2> Points, Vector2 Item)
+    {
+        Points.Add(Item);
+    }
+
+    public static void Append(this Array<Vector2> Points, Vector2 Item, int Limit)
+    {
+        Points.Add(Item);
+
+        if (Limit < Points.Count)
+        {
+            for (int i = 0; i < (Points.Count - Limit); i++)
+            {
+                Points.RemoveAt(0);
+            }
+        }
+    }
+}
+
 public partial class Element : Control
 {
     public Array<Vector2> Points = new();
