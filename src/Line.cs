@@ -15,6 +15,7 @@ public partial class Line : Element
             return;
         }
 
+        // Line を描画する
         Normalize()
             .Aggregate(
                 (prev, curr) =>
@@ -24,6 +25,7 @@ public partial class Line : Element
                 }
             );
 
+        // Marker を描画する
         Normalize().ToList().ForEach(Point => DrawCircle(position: Point, radius: MarkerSize, color: MarkerColor));
     }
 }
