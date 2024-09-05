@@ -3,9 +3,10 @@ using Godot;
 
 public partial class YAxis : Control
 {
-    public int Ticks = 3;
-    public float MinValue = 0;
     public float MaxValue = 0;
+    public float MinValue = 0;
+    public int Digits = 3;
+    public int Ticks = 3;
 
     public override void _Draw()
     {
@@ -19,7 +20,7 @@ public partial class YAxis : Control
             DrawString( //
                 font: _Font,
                 pos: new(_X, _Y),
-                text: Math.Round(i * Unit + MinValue, 1).ToString(),
+                text: Math.Round(i * Unit + MinValue, Digits).ToString(),
                 alignment: HorizontalAlignment.Right,
                 width: 32
             );
