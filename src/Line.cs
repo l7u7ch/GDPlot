@@ -3,8 +3,8 @@ using Godot;
 
 public partial class Line : Element
 {
-    public Color LineColor = Colors.Red;
-    public Color MarkerColor = Colors.Red;
+    public Color LineColor = new(GD.Randf(), GD.Randf(), GD.Randf());
+    public Color MarkerColor = new(GD.Randf(), GD.Randf(), GD.Randf());
     public int LineWeight = 2;
     public int MarkerSize = 4;
 
