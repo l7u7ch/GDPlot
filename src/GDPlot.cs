@@ -22,7 +22,7 @@ public partial class GDPlot : Control
         XAxis.Size = new Vector2(Size.X, 0);
         XAxis.Position = new Vector2(0, Size.Y);
         YAxis.Size = new Vector2(0, Size.Y);
-        YAxis.Position = new Vector2(-32, 0);
+        YAxis.Position = new Vector2(-64, 0);
 
         // 最大値と最小値を取得する
         Vector2 MaxValue = Plot.GetMaxValue();

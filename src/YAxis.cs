@@ -22,7 +22,7 @@ public partial class YAxis : Control
                 pos: new(_X, _Y),
                 text: Math.Round(i * Unit + MinValue, Digits).ToString(),
                 alignment: HorizontalAlignment.Right,
-                width: 32
+                width: 64
             );
         }
     }
