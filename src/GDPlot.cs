@@ -7,6 +7,9 @@ public partial class GDPlot : Control
     public XAxis XAxis = new();
     public YAxis YAxis = new();
 
+    [Export]
+    public string Title = "";
+
     public override void _Ready()
     {
         AddChild(Plot);
@@ -16,6 +19,15 @@ public partial class GDPlot : Control
 
     public override void _Draw()
     {
+        // タイトルを描画する
+        DrawString( //
+            font: ThemeDB.FallbackFont,
+            pos: new(0, 0),
+            text: Title,
+            alignment: HorizontalAlignment.Center,
+            width: Size.X
+        );
+
         // Plot, XAxis, YAxis の Size と Position を更新する
         Plot.Size = Size;
         Plot.Position = Vector2.Zero;
