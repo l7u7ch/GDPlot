@@ -4,12 +4,12 @@ using Godot.Collections;
 
 public static class ArrayExtensions
 {
-    public static void Append(this Array<Vector2> Points, Vector2 Item)
+    public static void AddLimit(this Array<Vector2> Points, Vector2 Item)
     {
-        Points.Add(Item);
+        Points.AddLimit(Item, 10);
     }
 
-    public static void Append(this Array<Vector2> Points, Vector2 Item, int Limit)
+    public static void AddLimit(this Array<Vector2> Points, Vector2 Item, int Limit)
     {
         Points.Add(Item);
 
